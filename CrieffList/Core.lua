@@ -2,7 +2,7 @@ local addonName, ns = ...
 
 CrieffList = CrieffList or {}
 CrieffList.name = addonName
-CrieffList.version = "0.2.0"
+CrieffList.version = "0.3.0"
 CrieffList.events = {}
 
 local frame = CreateFrame("Frame", "CrieffListEventFrame")

@@ -2,7 +2,10 @@ local GF = {}
 CrieffList.GroupFinder = GF
 
 local DUNGEON_CATEGORY = 2
-local RELAXED_PLAYSTYLE = 1
+
+local function RelaxedPlaystyleValue()
+    return Enum and Enum.LFGEntryGeneralPlaystyle and Enum.LFGEntryGeneralPlaystyle.FunRelaxed
+end
 
 local function OpenPremade()
     if not PVEFrame or not PVEFrame:IsShown() then
@@ -146,18 +149,18 @@ function GF.Debug(targetMapID)
 end
 
 local function SetPlaystyle(panel)
-    local dd = panel and panel.PlayStyleDropdown
-    if not dd then return end
-    if dd.SetSelectionID then
-        pcall(dd.SetSelectionID, dd, RELAXED_PLAYSTYLE, true)
-        return
+    if not panel then return end
+    local target = RelaxedPlaystyleValue()
+    if target == nil then return end
+    if _G.LFGListEntryCreation_OnPlayStyleSelectedInternal then
+        pcall(_G.LFGListEntryCreation_OnPlayStyleSelectedInternal, panel, target)
     end
-    if dd.SetSelected then
-        pcall(dd.SetSelected, dd, RELAXED_PLAYSTYLE)
-        return
+    if panel.generalPlaystyle ~= target then
+        panel.generalPlaystyle = target
     end
-    if dd.SetValue then
-        pcall(dd.SetValue, dd, RELAXED_PLAYSTYLE)
+    local dd = panel.PlayStyleDropdown
+    if dd and dd.GenerateMenu then
+        pcall(dd.GenerateMenu, dd)
     end
 end
 
