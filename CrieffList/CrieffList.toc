@@ -1,8 +1,8 @@
 ## Interface: 120000, 120005
 ## Title: CrieffList
 ## Notes: One-click Mythic+ key listing in Premade Groups.
-## Author: robbie
-## Version: 0.2.0
+## Author: Crieff
+## Version: @project-version@
 ## SavedVariablesPerCharacter: CrieffListCharDB
 ## IconTexture: Interface\Icons\INV_Relics_Hourglass
 
