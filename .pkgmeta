@@ -3,6 +3,8 @@ package-as: CrieffList
 ignore:
   - CLAUDE.md
   - PLAN.md
+  - README.md
+  - media
   - .github
   - .gitignore
   - .pkgmeta
