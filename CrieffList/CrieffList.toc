@@ -1,0 +1,13 @@
+## Interface: 120000, 120005
+## Title: CrieffList
+## Notes: One-click Mythic+ key listing in Premade Groups.
+## Author: robbie
+## Version: 0.2.0
+## SavedVariablesPerCharacter: CrieffListCharDB
+## IconTexture: Interface\Icons\INV_Relics_Hourglass
+
+Core.lua
+Comm.lua
+Keystones.lua
+GroupFinder.lua
+UI.lua
