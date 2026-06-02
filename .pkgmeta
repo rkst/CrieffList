@@ -1,8 +1,5 @@
 package-as: CrieffList
 
-move-folders:
-  crieff-list/CrieffList: CrieffList
-
 ignore:
   - CLAUDE.md
   - PLAN.md
