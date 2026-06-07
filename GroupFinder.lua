@@ -152,12 +152,12 @@ local function SetPlaystyle(panel)
     if not panel then return end
     local target = RelaxedPlaystyleValue()
     if target == nil then return end
-    if _G.LFGListEntryCreation_OnPlayStyleSelectedInternal then
-        pcall(_G.LFGListEntryCreation_OnPlayStyleSelectedInternal, panel, target)
-    end
-    if panel.generalPlaystyle ~= target then
-        panel.generalPlaystyle = target
-    end
+    -- Don't call LFGListEntryCreation_OnPlayStyleSelectedInternal: it routes
+    -- through LFGListEntryCreation_SetTitleFromActivityInfo, which calls the
+    -- protected C_LFGList.SetEntryTitle() and fires ADDON_ACTION_BLOCKED when
+    -- reached from addon code. Beyond that title autoset it only writes
+    -- panel.generalPlaystyle, which we do directly here.
+    panel.generalPlaystyle = target
     local dd = panel.PlayStyleDropdown
     if dd and dd.GenerateMenu then
         pcall(dd.GenerateMenu, dd)
