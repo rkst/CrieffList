@@ -43,7 +43,7 @@ Blizzard's Group Finder Name field is engine-protected — addons can read focus
 
 ## Installation
 
-CrieffList supports retail WoW (The War Within / Midnight, Interface 12.0.0 and 12.0.5).
+CrieffList supports retail WoW (Midnight, patch 12.1, Interface 120100).
 
 - **WowUp** — search for "CrieffList" in the WowUp Hub catalog.
 - **Manual** — download the latest release zip from the [Releases page](https://github.com/rkst/crieff-list/releases) and extract it into `World of Warcraft/_retail_/Interface/AddOns/`.

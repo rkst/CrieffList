@@ -1,4 +1,4 @@
-## Interface: 120007
+## Interface: 120100
 ## Title: CrieffList
 ## Notes: One-click Mythic+ key listing in Premade Groups.
 ## Author: Crieff
